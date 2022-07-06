@@ -10,7 +10,25 @@ namespace ProjetoOrdenação
     {
         public int[] trocaPosicao(int a, int b)
         {
-            return null;
+            int troca = a;
+            a = b;
+            b = troca;
+
+            int[] valores = new int[] { a, b };
+
+            return valores;
+        }
+        public int[] trocaPosicaoManual(int a, int b)
+        {
+            int troca = a;
+            a = b;
+            b = troca;
+
+            int[] valores = new int[2];
+            valores[0] = a;
+            valores[1] = b;
+
+            return valores;
         }
     }
 }
