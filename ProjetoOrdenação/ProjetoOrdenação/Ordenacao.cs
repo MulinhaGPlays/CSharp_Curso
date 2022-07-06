@@ -30,5 +30,9 @@ namespace ProjetoOrdenação
 
             return valores;
         }
+        public int[] OrdemCrescente(int[] valores)
+        {
+            return null;
+        }
     }
 }

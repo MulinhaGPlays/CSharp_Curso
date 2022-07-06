@@ -56,5 +56,14 @@ namespace TesteOrdenacao
             resultado = ordem.trocaPosicaoManual(2, 3);
             CollectionAssert.AreEqual(esperado, resultado);
         }
+        [TestMethod]
+        public void OrdemCrescente3Valores()
+        {
+            int[] esperado = new[] { 1,2,3 };
+            int[] resultado;
+            Ordenacao ordem = new Ordenacao();
+            resultado = ordem.OrdemCrescente(new int[] { 3,2,1 });
+            CollectionAssert.AreEqual(esperado, resultado);
+        }
     }
 }
