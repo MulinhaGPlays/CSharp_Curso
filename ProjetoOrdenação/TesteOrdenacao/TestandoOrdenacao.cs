@@ -57,7 +57,7 @@ namespace TesteOrdenacao
             CollectionAssert.AreEqual(esperado, resultado);
         }
         [TestMethod]
-        public void OrdemCrescente3Valores()
+        public void OrdemCrescente3ValoresPossitivos()
         {
             int[] esperado = new[] { 1,2,3 };
             int[] resultado;

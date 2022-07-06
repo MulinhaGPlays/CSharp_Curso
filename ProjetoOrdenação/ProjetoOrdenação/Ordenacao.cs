@@ -32,7 +32,20 @@ namespace ProjetoOrdenação
         }
         public int[] OrdemCrescente(int[] valores)
         {
-            return null;
+            int troca = 0;
+            for (int i = 0; i < valores.Length; i++)
+            {
+                for (int x = i+1; x < valores.Length; x++)
+                {
+                    if (valores[i] > valores[x])
+                    {
+                        troca = valores[i];
+                        valores[i] = valores[x];
+                        valores[x] = troca;
+                    }
+                }
+            }
+            return valores;
         }
     }
 }
