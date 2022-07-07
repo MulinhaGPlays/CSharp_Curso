@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = TesteOrdenacao
-build_property.ProjectDir = C:\Users\android\Documents\GitHub\CSharp_Curso\ProjetoOrdenação\TesteOrdenacao\
+build_property.ProjectDir = c:\Users\android\Documents\GitHub\CSharp_Curso\Lógicas\ProjetoOrdenação\TesteOrdenacao\
