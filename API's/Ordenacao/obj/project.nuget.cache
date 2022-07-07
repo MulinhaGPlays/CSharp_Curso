@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0FvBNm8zsqh2NyPRYfrNBZcd/okgNK0Ck5GpZXBUAKQCyUs2dXfCnmyK/kqMz6R2gW5NYB1jFaagL/zWXY0LRw==",
+  "dgSpecHash": "/evmyivQyH3/M5qxQBUDowGVueF7536UYnPdVIr47mZl/11bKdnT0K8yJe83a2arxqFNb7ss8/EExZB9lp2++A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\android\\Documents\\GitHub\\CSharp_Curso\\API's\\Estatistica\\Estatistica.csproj",
+  "projectFilePath": "C:\\Users\\android\\Documents\\GitHub\\CSharp_Curso\\API's\\Ordenacao\\Ordenacao.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\android\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\android\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
