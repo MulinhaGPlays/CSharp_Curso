@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "90uOLMxBwgJeoHAfQ9ww+pQzZfQ8HejC91RcmMSGd9CBTM2FNo/ZSOW/D2H3Mf8LB14yAqjPe/TgaiiTSTT6WQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SuperMulinhaGPlays\\Documents\\GitHub\\BackEnd_CSharp\\Estatistica\\Estatistica.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SuperMulinhaGPlays\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\SuperMulinhaGPlays\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\SuperMulinhaGPlays\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\SuperMulinhaGPlays\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\SuperMulinhaGPlays\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\SuperMulinhaGPlays\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
