@@ -3,6 +3,7 @@ using Ordenacao.Models;
 
 namespace OrdenacaoTest
 {
+
     [TestClass]
     public class NumbersOrdersTest
     {
@@ -14,7 +15,7 @@ namespace OrdenacaoTest
             NumbersOrders numbers = new NumbersOrders();
             result = numbers.Change(6,4);
 
-            CollectionsAssert.AreEqual(expected, result);
+            CollectionAssert.AreEqual(expected, result);
         }
     }
 }
