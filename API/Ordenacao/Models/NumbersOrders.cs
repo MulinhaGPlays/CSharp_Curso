@@ -19,11 +19,18 @@ namespace Ordenacao.Models
         }
         public int[] ChangeNegative(int number1, int number2)
         {
-            number1 = number1 * -1;
-            number2 = number2 * -1;
+
+            if (number1 > 0)
+            {
+                number1 = number1 * -1;
+            }
+            if (number2 > 0)
+            {
+                number2 = number2 * -1;
+            }
 
             int[] numbers = new int[] { number1, number2 };
-
+            
             return numbers;
         }
     }

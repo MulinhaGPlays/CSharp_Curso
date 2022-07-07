@@ -20,10 +20,10 @@ namespace OrdenacaoTest
         [TestMethod]
         public void ChangeNegativeTest()
         {
-            int[] expected = new int[] { 4, 6 };
+            int[] expected = new int[] { -4, -6 };
             int[] result;
             NumbersOrders numbers = new NumbersOrders();
-            result = numbers.ChangeNegative(-4,-6);
+            result = numbers.ChangeNegative(4,6);
 
             CollectionAssert.AreEqual(expected, result);
         }
