@@ -1,5 +1,7 @@
 {
     "dataworkspace.excludedProjects": [
-        "Database/SENAI/SENAI.sqlproj"
+        "Database/SENAI/SENAI.sqlproj",
+        "DATA/bdTarefas/bdTarefas.sqlproj",
+        "DATA/bdTarefas.sqlproj"
     ]
 }
