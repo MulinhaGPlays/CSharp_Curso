@@ -1,0 +1,16 @@
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\bin\Debug\net5.0\ProjetoOrdenacao.exe
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\bin\Debug\net5.0\ProjetoOrdenacao.deps.json
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\bin\Debug\net5.0\ProjetoOrdenacao.runtimeconfig.json
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\bin\Debug\net5.0\ProjetoOrdenacao.runtimeconfig.dev.json
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\bin\Debug\net5.0\ProjetoOrdenacao.dll
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\bin\Debug\net5.0\ProjetoOrdenacao.pdb
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\obj\Debug\net5.0\ProjetoOrdenacao.csproj.AssemblyReference.cache
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\obj\Debug\net5.0\ProjetoOrdenacao.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\obj\Debug\net5.0\ProjetoOrdenacao.AssemblyInfoInputs.cache
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\obj\Debug\net5.0\ProjetoOrdenacao.AssemblyInfo.cs
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\obj\Debug\net5.0\ProjetoOrdenacao.csproj.CoreCompileInputs.cache
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\obj\Debug\net5.0\ProjetoOrdenacao.dll
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\obj\Debug\net5.0\refint\ProjetoOrdenacao.dll
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\obj\Debug\net5.0\ProjetoOrdenacao.pdb
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\obj\Debug\net5.0\ProjetoOrdenacao.genruntimeconfig.cache
+c:\Users\android\Documents\GitHub\CSharp_Curso\LOGIC\ProjetoOrdenacao\ProjetoOrdenacao\obj\Debug\net5.0\ref\ProjetoOrdenacao.dll

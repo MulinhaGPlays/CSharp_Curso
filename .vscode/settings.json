@@ -2,6 +2,7 @@
     "dataworkspace.excludedProjects": [
         "Database/SENAI/SENAI.sqlproj",
         "DATA/bdTarefas/bdTarefas.sqlproj",
-        "DATA/bdTarefas.sqlproj"
+        "DATA/bdTarefas.sqlproj",
+        "DATA/CursoSQL/CursoSQL.sqlproj"
     ]
 }
