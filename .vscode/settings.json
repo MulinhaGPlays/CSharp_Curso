@@ -1,0 +1,5 @@
+{
+    "dataworkspace.excludedProjects": [
+        "Database/SENAI/SENAI.sqlproj"
+    ]
+}
