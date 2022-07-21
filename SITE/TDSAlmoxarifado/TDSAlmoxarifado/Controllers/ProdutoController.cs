@@ -13,5 +13,28 @@ namespace TDSAlmoxarifado.Controllers
         {
             return View();
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(string descricao,string minimo,string maximo,string estoque)
+        {
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Edit(int? id)
+        {
+            return View();
+        }
+        public ActionResult Delete(int? id)
+        {
+            return View();
+        }
+        public ActionResult Exibir(int? id)
+        {
+            return View();
+        }
     }
 }
