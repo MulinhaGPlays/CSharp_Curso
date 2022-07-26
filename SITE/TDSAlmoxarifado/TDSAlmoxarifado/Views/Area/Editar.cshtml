@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Editando Área</h2>
+
+<div>
+    <form action="/Area/Editar" method="post">
+        <label>Descrição: </label>
+        <input type="text" id="descricao" name="descricao" value="Área Controller" required></input>
+        <br />
+        <br />
+        <a href="/Area/Index" class="btn btn-primary">Voltar</a>
+        <button type="submit">Salvar</button>
+    </form>
+</div>
