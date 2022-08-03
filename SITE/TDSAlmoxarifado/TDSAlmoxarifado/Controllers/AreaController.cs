@@ -14,10 +14,31 @@ namespace TDSAlmoxarifado.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult Creat()
+        public ActionResult Details()
         {
             return View();
+        }
+        [HttpGet]
+        public ActionResult Edit()
+        {
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Delete()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(string descricao) 
+        {
+            return RedirectToAction("index");
         }
     }
 }

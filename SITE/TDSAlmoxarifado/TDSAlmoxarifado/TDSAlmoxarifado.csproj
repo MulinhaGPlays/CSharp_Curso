@@ -8,13 +8,13 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7B066D4A-7DE1-47F9-9AC0-7077F72BCC50}</ProjectGuid>
+    <ProjectGuid>{F40DCBAC-D79C-4E52-AF13-F7D386CCAFB3}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TDSAlmoxarifado</RootNamespace>
     <AssemblyName>TDSAlmoxarifado</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -45,10 +45,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -127,6 +133,42 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Area.cs">
+      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bdAlmoxarifadoModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdAlmoxarifadoModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bdAlmoxarifadoModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bdAlmoxarifadoModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdAlmoxarifadoModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Colaborador.cs">
+      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entrada.cs">
+      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ItensEntrada.cs">
+      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ItensSaida.cs">
+      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Produto.cs">
+      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Saida.cs">
+      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,8 +180,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\bdAlmoxarifadoModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>bdAlmoxarifadoModel.edmx</DependentUpon>
+      <LastGenOutput>bdAlmoxarifadoModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\bdAlmoxarifadoModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>bdAlmoxarifadoModel.edmx</DependentUpon>
+      <LastGenOutput>bdAlmoxarifadoModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\bdAlmoxarifadoModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>bdAlmoxarifadoModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\bdAlmoxarifadoModel.edmx.diagram">
+      <DependentUpon>bdAlmoxarifadoModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -169,15 +228,16 @@
     <Content Include="Views\Produto\Create.cshtml" />
     <Content Include="Views\Produto\Edit.cshtml" />
     <Content Include="Views\Produto\Delete.cshtml" />
-    <Content Include="Views\Produto\Exibir.cshtml" />
+    <Content Include="Views\Produto\Details.cshtml" />
     <Content Include="Views\Area\Index.cshtml" />
     <Content Include="Views\Area\Create.cshtml" />
-    <Content Include="Views\Area\Editar.cshtml" />
-    <Content Include="Views\Colaborador\Create.cshtml" />
+    <Content Include="Views\Area\Edit.cshtml" />
+    <Content Include="Views\Area\Details.cshtml" />
+    <Content Include="Views\Area\Delete.cshtml" />
+    <Content Include="Views\Colaborador\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -191,6 +251,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -208,9 +271,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>58405</DevelopmentServerPort>
+          <DevelopmentServerPort>57368</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:58405/</IISUrl>
+          <IISUrl>http://localhost:57368/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,22 +1,26 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Início";
 }
 
-<h2>Cadastrar Área <a href="/Area/Create"</h2>
+<h2>Cadastrar área</h2>
+
+<div>
+    <a href="/Area/Create?id=1" class="btn btn-success">Criar</a>
+</div>
 
 <table class="table">
     <thead>
         <tr>
-            <td>
+            <th>
                 Código
-            </td>
-            <td>
+            </th>
+            <th>
                 Descrição
-            </td>
-            <td>
+            </th>
+            <th>
                 Opções
-            </td>
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -28,9 +32,9 @@
                 TI
             </td>
             <td>
-                <a href="/Area/Editar?id1" class="btn btn-warning">Editar</a>
-                <a href="/Area/Editar?id1" class="btn btn-primary">Exibir</a>
-                <a href="/Area/Editar?id1" class="btn btn-danger">Excluir</a>
+                <a href="/Area/Edit?id=1" class="btn btn-warning">Editar</a>
+                <a href="/Area/Details?id=1" class="btn btn-info">Exibir</a>
+                <a href="/Area/Delete?id=1" class="btn btn-danger">Remover</a>
             </td>
         </tr>
         <tr>
@@ -38,14 +42,13 @@
                 02
             </td>
             <td>
-                DisneyPlus +++
+                Disney+
             </td>
             <td>
-                <a href="/Area/Editar?id1" class="btn btn-warning">Editar</a>
-                <a href="/Area/Editar?id1" class="btn btn-primary">Exibir</a>
-                <a href="/Area/Editar?id1" class="btn btn-danger">Excluir</a>
+                <a href="/Area/Edit?id=1" class="btn btn-warning">Editar</a>
+                <a href="/Area/Details?id=1" class="btn btn-info">Exibir</a>
+                <a href="/Area/Delete?id=1" class="btn btn-danger">Remover</a>
             </td>
         </tr>
     </tbody>
 </table>
-

@@ -1,16 +1,16 @@
-﻿@{
+﻿@model IEnumerable<TDSAlmoxarifado.Models.Produto>
+
+@{
     ViewBag.Title = "Produtos";
 }
-
 <div>
     <h2>
-        Gestão de Produtos
-        <a href=" /Produto/Create">
+        Gestâo de Produtos
+        <a href="/Produto/Create">
             <button type="button" class="btn btn-success">Novo</button>
         </a>
     </h2>
 </div>
-
 <div>
     <table class="table">
         <thead class="thead-dark">
@@ -24,22 +24,35 @@
             </tr>
         </thead>
         <tbody>
-            @for (int i = 0; i < 5; i++)
+            
+            
+            @foreach (var item in Model)
             {
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Feijão</td>
-                    <td>10</td>
-                    <td>50</td>
-                    <td>20</td>
                     <td>
-                        <a href="/Produto/Edit?id=1"><button type="button" class="btn btn-warning">Editar</button></a>
-                        <a href="/Produto/Exibir?id=1"><button type="button" class="btn btn-primary">Exibir</button></a>
-                        <a href="/Produto/Delete?id=1"><button type="button" class="btn btn-danger">Excluir</button></a>
+                        @Html.DisplayFor(modelItem => item.PROID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PRODESCRICAO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PROMINIMO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PROMAXIMO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PROESTOQUE)
+                    </td>
+                    <td>
+                        <a class="btn btn-warning" href="@Url.Action("Edit", new {id=item.PROID})">Editar</a>
+                        <a class="btn btn-info" href="@Url.Action("Details", new {id=item.PROID})">Exibir</a>
+                        <a class="btn btn-danger" href="@Url.Action("Delete", new {id=item.PROID})">Deletar</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
-
 </div>
+
+
