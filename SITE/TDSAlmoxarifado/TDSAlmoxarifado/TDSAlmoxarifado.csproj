@@ -8,13 +8,13 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F40DCBAC-D79C-4E52-AF13-F7D386CCAFB3}</ProjectGuid>
+    <ProjectGuid>{38D3B118-BEEC-4F67-895A-1963542519A8}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TDSAlmoxarifado</RootNamespace>
     <AssemblyName>TDSAlmoxarifado</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -45,13 +45,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -133,41 +135,44 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Area.cs">
-      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    <Compile Include="Models\AREA.cs">
+      <DependentUpon>Conexao.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\bdAlmoxarifadoModel.Context.cs">
+    <Compile Include="Models\COLABORADOR.cs">
+      <DependentUpon>Conexao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Conexao.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bdAlmoxarifadoModel.Context.tt</DependentUpon>
+      <DependentUpon>Conexao.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\bdAlmoxarifadoModel.cs">
+    <Compile Include="Models\Conexao.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+      <DependentUpon>Conexao.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\bdAlmoxarifadoModel.Designer.cs">
+    <Compile Include="Models\Conexao.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bdAlmoxarifadoModel.edmx</DependentUpon>
+      <DependentUpon>Conexao.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Colaborador.cs">
-      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    <Compile Include="Models\ENTRADA.cs">
+      <DependentUpon>Conexao.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entrada.cs">
-      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    <Compile Include="Models\ITENSENTRADA.cs">
+      <DependentUpon>Conexao.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ItensEntrada.cs">
-      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    <Compile Include="Models\ITENSSAIDA.cs">
+      <DependentUpon>Conexao.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ItensSaida.cs">
-      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    <Compile Include="Models\PRODUTO.cs">
+      <DependentUpon>Conexao.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Produto.cs">
-      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    <Compile Include="Models\ProdutosSaida.cs">
+      <DependentUpon>Conexao.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Saida.cs">
-      <DependentUpon>bdAlmoxarifadoModel.tt</DependentUpon>
+    <Compile Include="Models\SAIDA.cs">
+      <DependentUpon>Conexao.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -180,24 +185,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\bdAlmoxarifadoModel.Context.tt">
+    <Content Include="Models\Conexao.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>bdAlmoxarifadoModel.edmx</DependentUpon>
-      <LastGenOutput>bdAlmoxarifadoModel.Context.cs</LastGenOutput>
+      <LastGenOutput>Conexao.Context.cs</LastGenOutput>
+      <DependentUpon>Conexao.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\bdAlmoxarifadoModel.tt">
+    <Content Include="Models\Conexao.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>bdAlmoxarifadoModel.edmx</DependentUpon>
-      <LastGenOutput>bdAlmoxarifadoModel.cs</LastGenOutput>
+      <DependentUpon>Conexao.edmx</DependentUpon>
+      <LastGenOutput>Conexao.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\bdAlmoxarifadoModel.edmx">
+    <EntityDeploy Include="Models\Conexao.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>bdAlmoxarifadoModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Conexao.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\bdAlmoxarifadoModel.edmx.diagram">
-      <DependentUpon>bdAlmoxarifadoModel.edmx</DependentUpon>
+    <Content Include="Models\Conexao.edmx.diagram">
+      <DependentUpon>Conexao.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -232,9 +237,9 @@
     <Content Include="Views\Area\Index.cshtml" />
     <Content Include="Views\Area\Create.cshtml" />
     <Content Include="Views\Area\Edit.cshtml" />
-    <Content Include="Views\Area\Details.cshtml" />
     <Content Include="Views\Area\Delete.cshtml" />
     <Content Include="Views\Colaborador\Index.cshtml" />
+    <Content Include="Views\Colaborador\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -271,9 +276,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>57368</DevelopmentServerPort>
+          <DevelopmentServerPort>50825</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:57368/</IISUrl>
+          <IISUrl>http://localhost:50825/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

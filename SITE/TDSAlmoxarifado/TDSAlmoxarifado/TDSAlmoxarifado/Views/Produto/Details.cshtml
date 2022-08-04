@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Exibir Produto</h2>
+
+<div>
+    <form action="/Produto/Details" method="post">
+
+        <div class="form-group">
+            <label>Descrição</label>
+            <label>ValorEstático</label>
+        </div>
+
+        <div class="form-group">
+            <label>Mínimo</label>
+            <label>10</label>
+        </div>
+
+        <div class="form-group">
+            <label>Máximo</label>
+            <label>10</label>
+
+        </div>
+
+        <div class="form-group">
+            <label>Estoque Atual</label>
+            <label>10</label>
+        </div>
+
+        <div>
+            <a href="/Produto/Index"> <button type="button" class="btn btn-info">Voltar</button></a>
+            <button type="submit" class="btn btn-primary">Exibir</button>
+        </div>
+    </form>
+</div>
+
