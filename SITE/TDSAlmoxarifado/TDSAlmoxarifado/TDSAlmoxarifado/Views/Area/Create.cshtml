@@ -1,4 +1,4 @@
-﻿
+﻿@model TDSAlmoxarifado.Models.AREA
 @{
     ViewBag.Title = "Create";
 }
@@ -8,7 +8,8 @@
 <div>
     <form action="/Area/Create" method="post">
         <label>Descrição: </label>
-        <input type="text" id="descricao" name="descricao" required />
+        <input type="text" id="descricao" name="descricao" 
+               value="@Model.AREADESCRICAO" required />
         <br />
         <br />
         <a href="/Area/Index" class="btn btn-primary">Voltar</a>
