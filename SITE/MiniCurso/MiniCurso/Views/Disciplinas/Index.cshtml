@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MiniCurso.Models.Disciplinas>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>
+            Lista de Disciplinas
+            <a class="btn btn-success">Novo</a>
+        </h2>
+    </div>
+    <div class="col-md-6">
+        <h3 class="h3right">
+            Total de disciplinas: @ViewBag.qtdDisciplinas
+        </h3>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Disciplina</th>
+            <th>ID do Curso</th>
+            <th>Disch</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DISID</td>
+                <td>@item.DISDESCRICAO</td>
+                <td>@item.CURSOID</td>
+                <td>@item.DISCH</td>
+            </tr>
+        }
+    </tbody>
+</table>
