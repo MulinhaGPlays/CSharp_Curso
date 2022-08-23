@@ -2,7 +2,6 @@
 @{
     ViewBag.Title = "Index";
 }
-
 <div class="row">
     <div class="col-md-6">
         <h2>
@@ -27,13 +26,23 @@
     </thead>
     <tbody>
         @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.CURSOID</td>
-                    <td>@item.CURSODESCRICAO</td>
-                    <td>@item.CURSOCODHABILIDADE</td>
-                    <td>@item.CURSOMODALIDADE</td>
-                </tr>
-            }
+        {
+            <tr id="numbers">
+                <td>@item.CURSOID</td>
+                <td>@item.CURSODESCRICAO</td>
+                <td>@item.CURSOCODHABILIDADE</td>
+                <td>@item.CURSOMODALIDADE</td>
+                <td><a class="btn btn-info" href="Exibir">Exibir</a></td>
+                <td><a class="btn btn-warning" href="Editar">Editar</a></td>
+                <td><a class="btn btn-danger" onclick="Apagar()">Apagar</a></td>
+            </tr>
+        }
     </tbody>
 </table>
+<script>
+    const btnApagar = document.getElementById("numbers")
+
+    function Apagar() {
+        btnApagar.remove();
+    }
+</script>

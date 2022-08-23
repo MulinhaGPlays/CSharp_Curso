@@ -16,5 +16,17 @@ namespace MiniCurso.Controllers
             ViewBag.qtdCursos = bd.Cursos.ToList().Count();
             return View(bd.Cursos.ToList());
         }
+        public ActionResult Exibir()
+        {
+            return View(bd.Cursos.ToList());
+        }
+        public ActionResult Editar()
+        {
+            return View(bd.Cursos.ToList());
+        }
+        public ActionResult Apagar()
+        {
+            return View(bd.Cursos.ToList());
+        }
     }
 }
