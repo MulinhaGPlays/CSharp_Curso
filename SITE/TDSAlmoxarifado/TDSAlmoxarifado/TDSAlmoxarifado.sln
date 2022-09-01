@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDSAlmoxarifado", "TDSAlmoxarifado\TDSAlmoxarifado.csproj", "{38D3B118-BEEC-4F67-895A-1963542519A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDSAlmoxarifadoTest", "TDSAlmoxarifadoTest\TDSAlmoxarifadoTest.csproj", "{00B33718-EA0D-4148-A230-2C6CD437B391}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDSAlmoxarifadoTeste", "TDSAlmoxarifadoTeste\TDSAlmoxarifadoTeste.csproj", "{A8AA890C-299F-4DAC-991F-2AE0735E5DAE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{38D3B118-BEEC-4F67-895A-1963542519A8} = {38D3B118-BEEC-4F67-895A-1963542519A8}
 	EndProjectSection
@@ -20,10 +20,10 @@ Global
 		{38D3B118-BEEC-4F67-895A-1963542519A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38D3B118-BEEC-4F67-895A-1963542519A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38D3B118-BEEC-4F67-895A-1963542519A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00B33718-EA0D-4148-A230-2C6CD437B391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00B33718-EA0D-4148-A230-2C6CD437B391}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00B33718-EA0D-4148-A230-2C6CD437B391}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00B33718-EA0D-4148-A230-2C6CD437B391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8AA890C-299F-4DAC-991F-2AE0735E5DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8AA890C-299F-4DAC-991F-2AE0735E5DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8AA890C-299F-4DAC-991F-2AE0735E5DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8AA890C-299F-4DAC-991F-2AE0735E5DAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

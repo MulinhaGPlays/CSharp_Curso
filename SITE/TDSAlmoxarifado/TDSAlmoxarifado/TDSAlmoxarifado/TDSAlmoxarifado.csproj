@@ -166,6 +166,7 @@
     <Compile Include="Models\ITENSSAIDA.cs">
       <DependentUpon>Conexao.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Mensagem.cs" />
     <Compile Include="Models\PRODUTO.cs">
       <DependentUpon>Conexao.tt</DependentUpon>
     </Compile>
@@ -242,6 +243,7 @@
     <Content Include="Views\Area\Delete.cshtml" />
     <Content Include="Views\Colaborador\Index.cshtml" />
     <Content Include="Views\Colaborador\Create.cshtml" />
+    <Content Include="Views\Home\ErrorBD.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

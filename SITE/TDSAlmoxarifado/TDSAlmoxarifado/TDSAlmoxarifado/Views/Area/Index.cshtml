@@ -1,10 +1,9 @@
 ﻿@model IEnumerable<TDSAlmoxarifado.Models.AREA>
-
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Cadastrar Área <a href="/Area/Create" class="btn btn-success"></a></h2>
+<h2>Cadastrar Área <a href="/Area/Create" class="btn btn-success">Novo</a></h2>
 
 <table class="table">
     <thead>
@@ -23,22 +22,21 @@
 
     <tbody>
         @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        01
-                    </td>
-                    <td>
-                        TI
-                    </td>
-
-                    <td>
-                        <a href="/Area/Editar?id=@item.AREID" class="btn btn-warning">Editar</a>
-                        <a href="/Area/Exibir?id=@item.AREID" class="btn btn-primary">Exibir</a>
-                        <a href="/Area/Deletar?id=@item.AREID" class="btn btn-danger">Deletar</a>
-                    </td>
-                </tr>
-            }  
+        {
+            <tr>
+                <td>
+                    @item.AREID
+                </td>
+                <td>
+                    @item.AREDESCRICAO
+                </td>
+                <td>
+                    <a href="/Area/Edit?id=@item.AREID" class="btn btn-warning">Editar</a>
+                    <a href="/Area/Details?id=@item.AREID" class="btn btn-primary">Exibir</a>
+                    <a href="/Area/Delete?id=@item.AREID" class="btn btn-danger">Deletar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 

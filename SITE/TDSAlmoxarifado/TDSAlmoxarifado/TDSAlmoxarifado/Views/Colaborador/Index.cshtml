@@ -1,9 +1,9 @@
-﻿
+﻿@model IEnumerable<TDSAlmoxarifado.Models.COLABORADOR>
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Colaboradores <a href="/Colaborador/Create" class="btn btn-success">Novo Colaborador</a></h2>
+<h2>Colaboradores <a href="/Colaborador/Create" class="btn btn-success">Novo</a></h2>
 
 <table class="table">
     <thead>
@@ -27,44 +27,29 @@
     </thead>
 
     <tbody>
-        <tr>
-            <td>
-                01
-            </td>
-            <td>
-                Lucas GPlay
-            </td>
-            <td>
-                Gamer
-            </td>
-            <td>
-                TI Gamer
-            </td>
-            <td>
-                <a href="/Colaborador/Editar?id=1" class="btn btn-warning">Editar</a>
-                <a href="/Colaborador/Exibir?id=1" class="btn btn-primary">Exibir</a>
-                <a href="/Colaborador/Deletar?id=1" class="btn btn-danger">Deletar</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                02
-            </td>
-            <td>
-                Steve Jobs
-            </td>
-            <td>
-                Dono da Apple
-            </td>
-            <td>
-                TI Apple
-            </td>
-            <td>
-                <a href="/Colaborador/Editar?id=1" class="btn btn-warning">Editar</a>
-                <a href="/Colaborador/Exibir?id=1" class="btn btn-primary">Exibir</a>
-                <a href="/Colaborador/Deletar?id=1" class="btn btn-danger">Deletar</a>
-            </td>
-        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.COLID
+                </td>
+                <td>
+                    @item.COLNOME
+                </td>
+                <td>
+                    @item.COLCARGO
+                </td>
+                <td>
+                    @item.AREA.AREDESCRICAO
+                </td>
+                <td>
+                    <a href="/Colaborador/Edit?id=@item.COLID" class="btn btn-warning">Editar</a>
+                    <a href="/Colaborador/Details?id=@item.COLID" class="btn btn-primary">Exibir</a>
+                    <a href="/Colaborador/Delete?id=@item.COLID" class="btn btn-danger">Deletar</a>
+                </td>
+            </tr>
+        }
+        
     </tbody>
 </table>
 

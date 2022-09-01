@@ -1,4 +1,4 @@
-﻿
+﻿@model TDSAlmoxarifado.Models.AREA
 @{
     ViewBag.Title = "Delete";
 }
@@ -6,10 +6,16 @@
 <h2>Excluindo Área</h2>
 
 <div>
-    <form action="/Area/DeleteConfirmar" method="post">
-        <label>Descrição: </label>
-        <label>Área Controller</label>
-
+    <form action="/Area/DeleteConfirmar?id=@Model.AREID" method="post">
+        <div>
+            <label>Código: </label>
+            <label>@Model.AREID</label>
+        </div>
+        <div>
+            <label>Descrição: </label>
+            <label>@Model.AREDESCRICAO</label>
+        </div>
+        
         <br />
         <br />
         <a href="/Area/Index" class="btn btn-primary">Voltar</a>

@@ -9,17 +9,17 @@ namespace TDSAlmoxarifado.Models
     {
         public bool verificarEstoque(PRODUTO produto, int qtd)
         {
-
+          
             if (qtd <= produto.PROESTOQUE)
             {
-                return true;
+               return true;
             }
             else
             {
-                return false;
+              return false;
             }
 
-            throw new NotImplementedException();
+
         }
     }
 }

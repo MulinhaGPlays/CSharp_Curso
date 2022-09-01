@@ -17,7 +17,14 @@ namespace TDSAlmoxarifado.Controllers
         }
 
         [HttpGet]
-        public ActionResult Create(string nome, string cargo, int? codigoarea) 
+        public ActionResult Create() 
+        {
+            ViewBag.listaArea = bd.AREA.ToList();
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(string nome, string cargo, int codigoarea)
         {
             COLABORADOR colaborador = new COLABORADOR();
             colaborador.COLNOME = nome;
@@ -31,10 +38,12 @@ namespace TDSAlmoxarifado.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("ErrorDB", "Home");
+
+                return RedirectToAction("ErrorBD", "Home");
             }
 
             return RedirectToAction("Index");
+            
         }
     }
 }
