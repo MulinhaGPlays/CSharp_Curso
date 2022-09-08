@@ -45,5 +45,31 @@ namespace TDSAlmoxarifado.Controllers
             return RedirectToAction("Index");
             
         }
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            COLABORADOR excluirColaborador = bd.COLABORADOR.ToList().Where(x => x.COLID == id).First();
+
+            return View(excluirColaborador);
+        }
+
+        [HttpPost]
+        public ActionResult DeleteConfirma(int? id)
+        {
+            COLABORADOR excluirColaborador = bd.COLABORADOR.ToList().Where(x => x.COLID == id).First();
+            bd.COLABORADOR.Remove(excluirColaborador);
+
+            try
+            {
+                bd.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                ViewBag.errotexto = e.Message;
+                return RedirectToAction("Index");
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }

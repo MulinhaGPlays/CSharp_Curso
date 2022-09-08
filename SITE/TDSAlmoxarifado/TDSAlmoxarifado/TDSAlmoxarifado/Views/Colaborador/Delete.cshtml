@@ -1,0 +1,38 @@
+﻿@model TDSAlmoxarifado.Models.COLABORADOR
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar Colaborador</h2>
+
+<div>
+    <form action="/Colaborador/DeleteConfirma?id=@Model.COLID" method="post">
+
+        <div class="form-group">
+            <label>ID</label>
+            <label>@Model.COLID</label>
+        </div>
+
+        <div class="form-group">
+            <label>Nome</label>
+            <label>@Model.COLNOME</label>
+        </div>
+
+        <div class="form-group">
+            <label>Cargo</label>
+            <label>@Model.COLCARGO</label>
+        </div>
+
+        <div class="form-group">
+            <label>Área</label>
+            <label>@Model.AREID</label>
+
+        </div>
+
+        <div>
+            <a href="/Colaborador/Index"> <button type="button" class="btn btn-info">Voltar</button></a>
+            <button type="submit" class="btn btn-danger">Excluir</button>
+        </div>
+    </form>
+</div>
+

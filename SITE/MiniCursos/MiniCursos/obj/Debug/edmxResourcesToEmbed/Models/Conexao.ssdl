@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdCursosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Colaborador">
+    <Key>
+      <PropertyRef Name="COLID" />
+    </Key>
+    <Property Name="COLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COLLOGIN" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="COLSENHA" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cursos">
+    <Key>
+      <PropertyRef Name="CURSOID" />
+    </Key>
+    <Property Name="CURSOID" Type="int" Nullable="false" />
+    <Property Name="CURSODESCRICAO" Type="varchar" MaxLength="100" />
+    <Property Name="CURSOCODHABILIDADE" Type="varchar" MaxLength="100" />
+    <Property Name="CURSOMODALIDADE" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'bdCursos.dbo.Disciplinas' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Disciplinas">
+    <Key>
+      <PropertyRef Name="DISID" />
+    </Key>
+    <Property Name="DISID" Type="int" Nullable="false" />
+    <Property Name="DISDESCRIACAO" Type="varchar" MaxLength="500" />
+    <Property Name="CURSOID" Type="int" />
+    <Property Name="DISCH" Type="int" />
+  </EntityType>
+  <Association Name="FK__Disciplin__CURSO__276EDEB3">
+    <End Role="Cursos" Type="Self.Cursos" Multiplicity="0..1" />
+    <End Role="Disciplinas" Type="Self.Disciplinas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursos">
+        <PropertyRef Name="CURSOID" />
+      </Principal>
+      <Dependent Role="Disciplinas">
+        <PropertyRef Name="CURSOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Disciplin__CURSO__2B3F6F97">
+    <End Role="Cursos" Type="Self.Cursos" Multiplicity="0..1" />
+    <End Role="Disciplinas" Type="Self.Disciplinas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursos">
+        <PropertyRef Name="CURSOID" />
+      </Principal>
+      <Dependent Role="Disciplinas">
+        <PropertyRef Name="CURSOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Disciplin__CURSO__2F10007B">
+    <End Role="Cursos" Type="Self.Cursos" Multiplicity="0..1" />
+    <End Role="Disciplinas" Type="Self.Disciplinas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursos">
+        <PropertyRef Name="CURSOID" />
+      </Principal>
+      <Dependent Role="Disciplinas">
+        <PropertyRef Name="CURSOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdCursosModelStoreContainer">
+    <EntitySet Name="Colaborador" EntityType="Self.Colaborador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cursos" EntityType="Self.Cursos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Disciplinas" EntityType="Self.Disciplinas" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Disciplinas].[DISID] AS [DISID], 
+    [Disciplinas].[DISDESCRIACAO] AS [DISDESCRIACAO], 
+    [Disciplinas].[CURSOID] AS [CURSOID], 
+    [Disciplinas].[DISCH] AS [DISCH]
+    FROM [dbo].[Disciplinas] AS [Disciplinas]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Disciplin__CURSO__276EDEB3" Association="Self.FK__Disciplin__CURSO__276EDEB3">
+      <End Role="Cursos" EntitySet="Cursos" />
+      <End Role="Disciplinas" EntitySet="Disciplinas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Disciplin__CURSO__2B3F6F97" Association="Self.FK__Disciplin__CURSO__2B3F6F97">
+      <End Role="Cursos" EntitySet="Cursos" />
+      <End Role="Disciplinas" EntitySet="Disciplinas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Disciplin__CURSO__2F10007B" Association="Self.FK__Disciplin__CURSO__2F10007B">
+      <End Role="Cursos" EntitySet="Cursos" />
+      <End Role="Disciplinas" EntitySet="Disciplinas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
